@@ -1,16 +1,22 @@
+//i have commented out code that is related to mongo db
+//I am just showing two dummy json endpoints
+//but the mongo db code is fine if you want to use it
+
 const express = require("express");
 const app = express();
-const dotenv = require("dotenv").config();
-const connectDB = require("./service/connect.js");
-connectDB();
 
-const Restaurants = require("./models/restaurants.js");
 
-const filter = require("./controllers/restaurants/filter.js");
-const getRestuarantById = require("./controllers/restaurants/getRestaurantById.js");
-const createOtp = require("./controllers/otp/createOtp.js");
-const verifyOtp = require("./controllers/otp/verifyotp.js");
-const placeorder = require("./controllers/order/placeorder.js");
+// const dotenv = require("dotenv").config();
+// const connectDB = require("./service/connect.js");
+// connectDB();
+
+// const Restaurants = require("./models/restaurants.js");
+
+// const filter = require("./controllers/restaurants/filter.js");
+// const getRestuarantById = require("./controllers/restaurants/getRestaurantById.js");
+// const createOtp = require("./controllers/otp/createOtp.js");
+// const verifyOtp = require("./controllers/otp/verifyotp.js");
+// const placeorder = require("./controllers/order/placeorder.js");
 
 
 
@@ -21,16 +27,16 @@ app.use((req, res, next) => {
    next();
 });
 
-app.get("/api/restaurants/filter", filter);
+// app.get("/api/restaurants/filter", filter);
 
-app.get("/api/allRestaurants", async (req, res) => {
-   Restaurants.find((err, data) => {
-      if (err) {
-         console.error(err);
-      }
-      res.send(data);
-   });
-});
+// app.get("/api/allRestaurants", async (req, res) => {
+//    Restaurants.find((err, data) => {
+//       if (err) {
+//          console.error(err);
+//       }
+//       res.send(data);
+//    });
+// });
 
 app.get("/hello", (req, res) => {
    res.send("Hello World");
@@ -42,14 +48,14 @@ app.get("/hellojson", (req, res) => {
       message: "Hello World",
       name: "Monkey",
       age: 20,
-      
+
 
     });
 });
 
-app.get("/api/restaurant", getRestuarantById);
+// app.get("/api/restaurant", getRestuarantById);
 
-app.post("/api/createotp", createOtp);
-app.post("/api/verifyotp", verifyOtp);
+// app.post("/api/createotp", createOtp);
+// app.post("/api/verifyotp", verifyOtp);
 
-app.post("/api/placeorder", placeorder);
+// app.post("/api/placeorder", placeorder);
