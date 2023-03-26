@@ -1,30 +1,20 @@
 {
-  "name": "nodejshelloworld",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Node JS Hello World",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d dist",
-    "start": "npm run build && node dist",
-    "restart": "rimraf dist && npm run start",
-    "dev": "nodemon --exec npm run restart"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "nodejs"
-  ],
-  "author": "jay",
+  "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emailjs/nodejs": "^2.1.1",
+    "body-parser": "^1.20.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.18.6",
-    "@babel/core": "^7.18.6",
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/preset-env": "^7.18.6",
-    "nodemon": "^2.0.19",
-    "rimraf": "^3.0.2"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.2",
+    "nodemailer": "^6.9.1"
   }
 }
