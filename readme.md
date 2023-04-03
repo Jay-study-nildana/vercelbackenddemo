@@ -1,14 +1,25 @@
 # Vercel Demo 
 
-Note: Special Thanks to
+This is a stripped down minimal version of the code, which shows a simple server. 
+
+for the original code, check out the branch, [Previously](https://github.com/Jay-study-nildana/vercelbackenddemo/tree/Previously)
+
+# how to run
+
+```
+    npm install
+    nodemon index.js
+```
+
+note: you will have to install nodemon globally. 
+
+# Special Thanks to the following students.
 
 1. Mayank : https://github.com/Mayank-Jain-1
 1. Akshat : https://github.com/Akki-Rawat
 1. Sukwant : https://github.com/sukhepadda/
 
-Source Code: https://github.com/Mayank-Jain-1/SpoonFed.github.io
-
-(only the server code)
+Original Source Code: https://github.com/Mayank-Jain-1/SpoonFed.github.io
 
 # things to remember
 
