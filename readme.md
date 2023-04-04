@@ -46,6 +46,27 @@ If you don't put this, then, deployment will nto give any errors, but, you will 
 
 Please remember that only the first deployment is pushed directly to the main production URL. Successive commits and push will default to the 'dev' deployment domains. So, you may have to "Promote to Production" in your vercel dashboard.
 
+# things to remember : CORS
+
+Now, after deployment, you try to access the api endpoint, you may get the following error. 
+
+```
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://bfsdfbackendapril4th2023.vercel.app/hellojson. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing). Status code: 200.
+```
+Then, that means, we need to enable CORS. There are many ways to do it. one way to do it is, like this.
+
+Step 1. 
+
+```
+// import cors
+const cors = require("cors");
+```
+Step 2.
+
+```
+app.use(cors()); 
+```
+
 # References
 
 1. https://medium.com/projectwt/github-actions-node-js-azure-web-app-what-a-insert-expletive-nightmare-863ece42485a
