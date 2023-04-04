@@ -13,19 +13,38 @@ for the original code, check out the branch, [Previously](https://github.com/Jay
 
 note: you will have to install nodemon globally. 
 
-# Special Thanks to the following students.
-
-1. Mayank : https://github.com/Mayank-Jain-1
-1. Akshat : https://github.com/Akki-Rawat
-1. Sukwant : https://github.com/sukhepadda/
-
-Original Source Code: https://github.com/Mayank-Jain-1/SpoonFed.github.io
-
 # things to remember
 
 1. we are not actually using the mongo db things. 
 1. endpoint 1, http://localhost:4000/hellojson
 1. endpoint 2, http://localhost:4000/hello
+
+# things to remember : vercel.json
+
+The entire deployment magic with vercel, only happens after you add the 'vercel.json' file to your project root. it will look something like this.
+
+```
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@now/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "index.js"
+      }
+    ]
+  }
+```
+If you don't put this, then, deployment will nto give any errors, but, you will simply see the "source code of index.js" in your deployment.
+
+# things to remember : successive deployments
+
+Please remember that only the first deployment is pushed directly to the main production URL. Successive commits and push will default to the 'dev' deployment domains. So, you may have to "Promote to Production" in your vercel dashboard.
 
 # References
 
@@ -36,6 +55,14 @@ Original Source Code: https://github.com/Mayank-Jain-1/SpoonFed.github.io
 1. https://ourcodeworld.com/articles/read/261/how-to-create-an-http-server-with-express-in-node-js
 1. https://stackoverflow.com/questions/61186632/deploy-simple-express-app-to-azure-app-service
 1. https://github.com/Azure-Samples/nodejs-docs-hello-world
+
+# Special Thanks to the following students.
+
+1. Mayank : https://github.com/Mayank-Jain-1
+1. Akshat : https://github.com/Akki-Rawat
+1. Sukwant : https://github.com/sukhepadda/
+
+Original Source Code: https://github.com/Mayank-Jain-1/SpoonFed.github.io
 
 # Hire Me
 
